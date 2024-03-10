@@ -27,7 +27,9 @@ function XDictionary() {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
-      {searchResult && (
+      <h2>Definition:</h2>
+      <p>{searchResult}</p>
+      {/* {searchResult && (
         <div>
           <h2>Definition:</h2>
           <p>{searchResult}</p>
@@ -38,7 +40,7 @@ function XDictionary() {
           <h2>Definition:</h2>
           <p>Word not found in the dictionary.</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
