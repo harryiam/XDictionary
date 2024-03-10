@@ -14,7 +14,7 @@ function XDictionary() {
     const result = initialDictionary.find(entry =>
       entry.word.toLowerCase() === searchTerm.toLowerCase()
     );
-    setSearchResult(result ? result.meaning : "Word not found");
+    setSearchResult(result ? result.meaning : "Word not found in the dictionary");
   };
 
   return (
