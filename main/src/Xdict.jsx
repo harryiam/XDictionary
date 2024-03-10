@@ -8,7 +8,7 @@ const initialDictionary = [
 
 function XDictionary() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchResult, setSearchResult] = useState(null);
+  const [searchResult, setSearchResult] = useState('');
 
   const handleSearch = () => {
     const result = initialDictionary.find(entry =>
@@ -31,6 +31,12 @@ function XDictionary() {
         <div>
           <h2>Definition:</h2>
           <p>{searchResult}</p>
+        </div>
+      )}
+      {!searchResult && (
+        <div>
+          <h2>Definition:</h2>
+          <p>Word not found in the dictionary.</p>
         </div>
       )}
     </div>
